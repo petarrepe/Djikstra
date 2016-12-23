@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Djikstra", "Djikstra\Djikstra.csproj", "{CE0AEBA1-5177-4177-AF81-5303F52C4BF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjikstraMVC", "Djikstra\DjikstraMVC.csproj", "{CE0AEBA1-5177-4177-AF81-5303F52C4BF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjikstraLib", "DjikstraLib\DjikstraLib.csproj", "{D4A44F84-7E30-48D4-B3E8-9063225B398D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CE0AEBA1-5177-4177-AF81-5303F52C4BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE0AEBA1-5177-4177-AF81-5303F52C4BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE0AEBA1-5177-4177-AF81-5303F52C4BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A44F84-7E30-48D4-B3E8-9063225B398D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A44F84-7E30-48D4-B3E8-9063225B398D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A44F84-7E30-48D4-B3E8-9063225B398D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A44F84-7E30-48D4-B3E8-9063225B398D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
