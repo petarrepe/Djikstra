@@ -42,7 +42,7 @@ namespace DjikstraLib
 
         }
 
-        public void DjikstraShortestPath(int indexOfSourceVertex, int indexOfEndVertex)
+        public string DjikstraShortestPath(int indexOfSourceVertex, int indexOfEndVertex)
         {
             Vertex source = vertices.Find(t => t._data == Convert.ToChar(indexOfSourceVertex + 65).ToString());
             Vertex destination = vertices.Find(t => t._data == Convert.ToChar(indexOfEndVertex + 65).ToString());
@@ -58,6 +58,8 @@ namespace DjikstraLib
                 currentlyVisitedNode = ChooseNextNode(distances, visitedNodes);
             }
             string shorttestPathFormatted = PrintShortestPath(indexWhichSetMinDistance, indexOfEndVertex, indexOfSourceVertex);
+
+            return shorttestPathFormatted;
         }
 
         private string PrintShortestPath(char[] indexWhichSetMinDistance, int indexOfEndVertex, int indexOfSourceVertex)

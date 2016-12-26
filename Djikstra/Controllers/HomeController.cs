@@ -1,6 +1,9 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using DjikstraLib;
+using GraphVizWrapper;
+using GraphVizWrapper.Commands;
+using GraphVizWrapper.Queries;
+using System;
 
 namespace Djikstra.Controllers
 {
@@ -9,7 +12,22 @@ namespace Djikstra.Controllers
         public ActionResult Index()
         {
             var graph = new Graph<string>(GetGraphForAssignment());
-            graph.DjikstraShortestPath(0,17);
+            ViewBag.shortestPath = graph.DjikstraShortestPath(0,17);
+
+            //var getStartProcessQuery = new GetStartProcessQuery();
+            //var getProcessStartInfoQuery = new GetProcessStartInfoQuery();
+            //var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuery, getStartProcessQuery);
+
+            // GraphGeneration can be injected via the IGraphGeneration interface
+
+            //var wrapper = new GraphGeneration(getStartProcessQuery,
+            //                                  getProcessStartInfoQuery,
+            //                                  registerLayoutPluginCommand);
+
+            //var bytes = wrapper.GenerateGraph("digraph{s -> v; v -> g; g -> s; g -> f; f -> o; o -> r; r -> m; m -> a; a -> t; t -> f;}", Enums.GraphReturnType.Svg);
+            //var viewModel = System.Text.Encoding.UTF8.GetString(bytes);
+            //ViewBag.Data = viewModel;
+
             return View();
         }
 
@@ -43,20 +61,6 @@ namespace Djikstra.Controllers
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
             };
             return adjMatrix;
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }
